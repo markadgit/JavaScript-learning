@@ -1,3 +1,90 @@
+<!-- 関数 -->
+<!-- 関数には関数宣言と関数式がある -->
+<!-- 関数宣言：function myFunc() {} -->
+<!-- 関数式：const myFunc = function() {}-->
+<!-- アロー関数：const myFunc = () => {} -->
+
+<!-- <body>
+    <script>
+        function myFunc1() {
+            console.log("これは関数宣言です");
+        }
+        myFunc1();
+
+        const myFunc2 = () => {
+            console.log("これは関数式です");
+        };
+        myFunc2();
+    </script>
+</body> -->
+
+<!-- <body>
+    <script>
+        const myFunc = (keyword) => {
+            console.log("指定した文字は、「" + keyword + "」ですね？");
+        };
+        myFunc("プログラミング");
+    </script>
+</body> -->
+
+<!-- <body>
+    <script>
+        const products = [
+            "テレビ",
+            "冷蔵庫",
+            "机",
+            "スマホ",
+            "本棚",
+            "椅子",
+            "テーブル",
+        ];
+        const search = (items, target) => {
+            const result = items.filter((item) => item === target);
+
+            if (result.length) {
+                console.log("商品が見つかりました");
+            } else {
+                console.log("お探しの商品が見つかりませんでした");
+            }
+        };
+        search(products, "スマホ");
+    </script>
+</body> -->
+
+<!-- <body>
+    <script>
+        const myNumber = 10;
+
+        const getDouble = (number) => {
+            return number * 2;
+        };
+        console.log(getDouble(myNumber));
+    </script>
+</body> -->
+<!-- ＜条件＞
+
+prompt()を利用してドルを入力できるようにする
+関数を利用した換算処理を作る
+繰り返し何度も入力できる
+「キャンセル」をクリックするとプログラムは終了
+何も入力せずに「OK」ボタンをクリックしても終了すること
+換算結果は「◯円です」のように出力する
+1ドル108円で計算する -->
+
 <body>
-    <script></script>
+    <script>
+        const Dollar = 108;
+
+        const getDollarToYen = (number) => {
+            return number * Dollar;
+        };
+
+        while (true) {
+            const money = prompt("ドルから円に換算します");
+
+            if (money) {
+                console.log(getDollarToYen(money) + "円です");
+            } else break;
+        }
+    </script>
 </body>
