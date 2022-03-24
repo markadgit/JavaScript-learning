@@ -1,0 +1,82 @@
+<!-- 7章オブジェクト -->
+<!-- const myObj = {};
+上記のように空っぽの{ }を代入することを、初期化処理 -->
+<!-- 新しくプロパティを追加するには、user.新規プロパティ名 = 値 -->
+<!-- deleteのあとに削除したいプロパティを指定  delete user.area; -->
+<!-- プロパティは名前と値の組み合わせで構成 -->
+<!-- メソッドは名前と関数で構成 -->
+
+<!-- <body>
+    <script>
+        const user = {
+            name: "太郎",
+            age: 30,
+            area: "東京都",
+        };
+
+        user.name = "山田太郎";
+        console.log(user.name);
+        console.log(user.age);
+        console.log(user.area);
+    </script>
+</body> -->
+
+<!-- <body>
+    <script>
+        const user = {
+            name: "太郎",
+            age: 30,
+            area: "東京",
+        };
+
+        user.hobby = "映画鑑賞";
+
+        delete user.area;
+
+        console.log(user);
+    </script>
+</body> -->
+
+<!-- <body>
+    <script>
+        const user = {
+            name: "山田太郎",
+            age: 30,
+            getName: function () {
+                console.log(this.name);
+            },
+        };
+        user.getName();
+    </script>
+</body> -->
+
+<!-- <body>
+    <script>
+        const obj = {
+            getThis1: function () {
+                return this;
+            },
+            getThis2: () => this,
+        };
+        console.log(obj.getThis1());
+        console.log(obj.getThis2());
+    </script>
+</body> -->
+
+<!-- 簡単な「連絡帳」アプリを作ってみましょう。
+
+ユーザーに名前と電話番号を入力してもらい、その値をuserオブジェクトに格納します。そして、コンソールログにuserオブジェクトの中身を出力できれば完成です。（ユーザーから入力してもらうには、5章で学習したpromptメソッドを使います）　s -->
+
+<body>
+    <script>
+        const user_name = prompt("名前を入力してください");
+        const user_tell = prompt("電話番号を入力してください");
+
+        const user = {};
+
+        user.name = user_name;
+        user.tell = user_tell;
+
+        console.log(user);
+    </script>
+</body>
