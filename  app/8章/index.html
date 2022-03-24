@@ -1,0 +1,68 @@
+<!-- 8章クラス -->
+<!-- クラスをコピーする処理をインスタンス化と呼び、コピーされたdogオブジェクトをインスタンスと呼ぶ。 -->
+<!-- プロパティを定義。プロパティはconstructor() { }の中に記述するのがルール -->
+<!-- メソッドを定義。class内においてメソッド名() { }のように記載 -->
+
+<!-- <body>
+    <script>
+        class Character { constructor(name, hp) { this.name = name; this.hp = hp; }
+          attack() { console.log(this.name + 'の攻撃！'); }
+        class Hero extends Character {
+          control() {}
+          superAttack() {}
+          speak() {}
+        }
+        class Enemy extends Character {
+          dropItem() {}
+          getPoint() {}
+        }
+        const hero = new Hero('主人公', 100);
+        const enemy = new Enemy('敵', 10);
+
+        hero.attack();
+        enemy.attack();
+    </script>
+</body> -->
+
+<!-- <body>
+    <script>
+        class Animal {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+        }
+        class Cat extends Animal {
+            constructor(name, age, type) {
+                super(name, age);
+                this.type = type;
+            }
+        }
+        const cat = new Cat("猫", 3, "シャム");
+        console.log(cat);
+    </script>
+</body> -->
+
+<body>
+    <script>
+        class Animal {
+            constructor(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+        }
+        class Cat extends Animal {
+            constructor(name, age, type) {
+                super(name, age);
+                this.type = type;
+            }
+            speak() {
+                console.log(this.name + "が「にゃーん」と鳴きました！");
+            }
+        }
+
+        const cat = new Cat("猫", 3, "シャム");
+
+        cat.speak();
+    </script>
+</body>
