@@ -1,0 +1,266 @@
+<!-- DOM操作の基本 -->
+
+<!-- <!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="utf-8" />
+        <title>サンプルデモ</title>
+    </head>
+    <body>
+        <h1>タイトル</h1>
+
+        <script>
+            console.log(document.head);
+            console.log(document.body);
+        </script>
+    </body>
+</html> -->
+
+<!-- <body>
+    <script>
+        console.log(window);
+    </script>
+</body> -->
+
+<!-- <body>
+    <ul>
+        <li id="text" class="sample">１つ目の項目</li>
+        <li class="sample">２つ目の項目</li>
+    </ul>
+
+    <script>
+        const text = document.getElementById("text");
+        const li = document.querySelector("li");
+
+        console.log(text);
+        console.log(li);
+    </script>
+</body> -->
+
+<!-- <body>
+    <ul>
+        <li id="text" class="sample">1つ目の項目</li>
+        <li class="sample">2つ目の項目</li>
+    </ul>
+
+    <script>
+        const sample = document.getElementsByClassName("sample");
+        console.log(sample);
+    </script>
+</body> -->
+
+<!-- <body>
+    <ul>
+        <li id="text" class="sample">１つ目の項目</li>
+        <li class="sample">２つ目の項目</li>
+    </ul>
+
+    <script>
+        const sample = document.getElementsByClassName("sample");
+
+        for (let i = 0; i < sample.length; i++) {
+            console.log(sample[i]);
+        }
+    </script>
+</body> -->
+
+<!-- <body>
+    <h1>サンプルタイトル</h1>
+    <h2>小見出し１</h2>
+
+    <script>
+        const h2 = document.createElement("h2");
+
+        h2.textContent = "小見出し2";
+        document.body.appendChild(h2);
+    </script>
+</body> -->
+
+<!-- <body>
+    <div></div>
+    <script>
+        const div = document.querySelector("div");
+        const h1 = document.createElement("h1");
+
+        h1.textContent = "これはh1要素です";
+        div.appendChild(h1);
+
+        console.log(document.body);
+    </script>
+</body> -->
+
+<!-- <body>
+    <button id="btn">実行</button>
+
+    <script>
+        const btn = document.getElementById("btn");
+
+        btn.addEventListener("click", () => {
+            console.log("クリックされました!");
+        });
+    </script>
+</body> -->
+
+<!-- <body>
+    <button id="btn">追加</button>
+    <ul id="list"></ul>
+
+    <script>
+        const list = document.getElementById("list");
+        const btn = document.getElementById("btn");
+
+        btn.addEventListener("click", () => {
+            const li = document.createElement("li");
+
+            li.textContent = "これはリスト要素です";
+            list.appendChild(li);
+        });
+    </script>
+</body> -->
+
+<!-- <body>
+    <form name="myForm">
+        <input type="text" name="myText" />
+    </form>
+    <button id="btn">カウント</button>
+
+    <script>
+        const btn = document.getElementById("btn");
+
+        btn.addEventListener("click", () => {
+            const value = document.forms.myForm.myText.value; // 入力された文字列を取得する
+
+            console.log(value.length + "文字"); // 文字数を出力する
+        });
+    </script>
+</body> -->
+
+<!-- <body>
+    <form name="myForm">
+        <input type="radio" name="area" value="tokyo" />東京都
+        <input type="radio" name="area" value="aichi" />愛知県
+        <input type="radio" name="area" value="osaka" />大阪府
+    </form>
+    <button id="btn">実行</button>
+
+    <script>
+        const btn = document.getElementById("btn");
+
+        btn.addEventListener("click", () => {
+            const form = document.forms.myForm;
+
+            console.log(form.area.value);
+        });
+    </script>
+</body> -->
+
+<!-- <body>
+    <form name="myForm">
+        <label>利用したことのあるOSを選択してください</label><br />
+        <input type="checkbox" name="os" value="windows" />Windows
+        <input type="checkbox" name="os" value="macos" />Mac OS
+        <input type="checkbox" name="os" value="linux" />Linux
+        <input type="checkbox" name="os" value="ios" />iOS
+        <input type="checkbox" name="os" value="android" />Android
+    </form>
+
+    <button id="btn">実行</button>
+
+    <script>
+        const btn = document.getElementById("btn");
+
+        btn.addEventListener("click",()=>{
+            const form=document.forms.myForm;
+
+            form.os.forEach(item=>{
+                if(item.checked)console.log(item.value);
+            })
+        }
+    </script>
+</body> -->
+
+<!-- <body>
+    <form action="myForm">
+        <label>名前:<input type="text" name="name" /></label>
+
+        <br />
+
+        <label>メールアドレス: <input type="text" name="email" /></label>
+
+        <br />
+
+        <label>年齢：</label>
+        <input type="radio" name="age" value="20" />20代
+        <input type="radio" name="age" value="30" />30代
+        <input type="radio" name="age" value="40" />40代
+        <input type="radio" name="age" value="50" />50代
+
+        <br /><br />
+
+        <label>普段使っているスマホは？</label><br />
+        <input type="checkbox" name="phone" value="i Phone" />Windows
+        <input type="checkbox" name="phone" value="Android" />Mac OS
+        <input type="checkbox" name="phone" value="ガラケー" />Linux
+        <input type="checkbox" name="phone" value="その他" />iOS
+    </form>
+    <button id="btn">実行</button>
+
+    <script>
+        const btn = document.getElementById("btn");
+        btn.addEventListener("click", () => {
+            const form = document.forms.myForm;
+            console.log(form.name.value);
+            console.log(form.email.value);
+            console.log(form.age.value);
+
+            form.phone.forEach((item) => {
+                if (item.checked) console.log(item.vaue);
+            });
+        });
+    </script>
+</body> -->
+
+<body>
+    <form name="myForm">
+        <label>名前：<input type="text" name="name" /></label>
+
+        <br />
+
+        <label>メールアドレス：<input type="email" name="email" /></label>
+
+        <br />
+
+        <label>年齢：</label>
+        <input type="radio" name="age" value="20" />20代
+        <input type="radio" name="age" value="30" />30代
+        <input type="radio" name="age" value="40" />40代
+        <input type="radio" name="age" value="50" />50代
+
+        <br /><br />
+
+        <label>普段使っているスマホは？</label><br />
+        <input type="checkbox" name="phone" value="iphone" />iPhone
+        <input type="checkbox" name="phone" value="android" />Android
+        <input type="checkbox" name="phone" value="flip-phone" />ガラケー
+        <input type="checkbox" name="phone" value="other" />その他
+    </form>
+    <br />
+
+    <button id="btn">実行</button>
+
+    <script>
+        const btn = document.getElementById("btn");
+
+        btn.addEventListener("click", () => {
+            const form = document.forms.myForm;
+            console.log(form.name.value); //名前の取得
+            console.log(form.email.value); //メールアドレスの取得
+            console.log(form.age.value); //年齢の取得
+
+            //スマホ種類の取得
+            form.phone.forEach((item) => {
+                if (item.checked) console.log(item.value);
+            });
+        });
+    </script>
+</body>
